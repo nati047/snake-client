@@ -1,8 +1,10 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
+
 const connect = function () {
   const conn = net.createConnection({ // establishes a connection with the game server
-    host: '165.227.47.243',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   conn.setEncoding("utf8");   // interpret incoming data as text
